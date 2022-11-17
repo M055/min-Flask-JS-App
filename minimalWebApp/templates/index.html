@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mystyles.css') }}">
+<script type=text/javascript src="{{url_for('static', filename='scripts/js/postfunctions.js') }}"></script>
+<script>
+  var placeholder_text = '{{data.outValue}}';
+  var py_text = '{{data.pyValue}}';
+  var select1ID = '{{data.sel1}}';
+  var select2ID = '{{data.sel2}}';
+</script>
+<title>Title here</title>
+</head>
+
+<body>
+  <center><h1>Python Backend Test</h1></center>
+
+  <div >
+    A simple calculation..
+
+    Make a 2-digit number:
+    <select id='select1'>
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+    </select>
+    <select  id='select2'>
+      <option value=5>5</option>
+      <option value=6>6</option>
+      <option value=7>7</option>
+      <option value=8>8</option>
+    </select>
+
+    <button type="button" onclick="goClickedFn()">Go!</button>
+    <form method="post">
+      <input type="submit" id="submit_form" name="submit_button" onclick="submitClickedFn()">
+    </form>
+
+
+    <p id='response_loc'>
+      ...placeholder...
+    </p>
+    <script>
+        document.getElementById("response_loc").innerHTML = placeholder_text+' squared is '+py_text;
+        document.getElementById("select1").selectedIndex=select1ID;
+        document.getElementById("select2").selectedIndex=select2ID;
+    </script>
+
+
+  </div>
+
+
+
+  <footer>
+    <p>
+      <hr/>
+      (c) mohinish dot s snail gmail, 2022. <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">MIT License.</a>
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+body, html {
+ font-family: Geneva;
+ padding: 10px;
+ margin: 10px;
+ padding: 10px;
+ border: 10px;
+ min-width: auto;
+ min-height: auto;
+ box-sizing: border-box;
+}
+
+footer {
+  font-size: 80%;
+}
+
+#submit_form{
+  visibility: hidden;
+}
